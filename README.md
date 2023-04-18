@@ -1,6 +1,7 @@
 # Grocery Shop
 
 This project is intended for BCA Workshop project. You just simply clone this project to begin.
+For full code you can see the [main branch](https://github.com/janice-laksana/hardhat-grocery-shop)
 
 ## Requirements
 - [Metamask](https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn?hl=en) browser extension installed
