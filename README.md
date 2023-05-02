@@ -15,9 +15,9 @@ This project is intended for BCA Workshop project. You just simply clone this pr
 ## Development Guide
 - Grocery Shop Quickstart
 ```
-git clone https://github.com/janice-laksana/hardhat-grocery-shop
-cd hardhat-grocery-shop
-yarn
+git clone https://github.com/GLU-Project/bca-workshop.git
+cd bca-workshop
+npm i
 
 ```
 - create `.env` file based on `.env.example`
@@ -38,21 +38,21 @@ COINMARKETCAP_API_KEY=""
 ## Usage
 #### Compile
 ```
-yarn hardhat compile
+npx hardhat compile
 ```
 
 #### Deploy
 - Using hardhat network
 ```
-yarn hardhat run scripts/deploy.ts --network hardhat 
+npx hardhat run scripts/deploy.ts --network hardhat 
 ```
 - Using goerli network
 ```
-yarn hardhat run scripts/deploy.ts --network goerli 
+npx hardhat run scripts/deploy.ts --network goerli 
 ```
 #### Testing
 ```
-yarn hardhat test
+npx hardhat test
 ```
 
 ## Resources
