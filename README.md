@@ -3,61 +3,13 @@
 This project is intended for BCA Workshop project. You just simply clone this project to begin.
 
 ## Requirements
-- [Metamask](https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn?hl=en) browser extension installed
-- [Alchemy](https://www.alchemy.com/)
-  - Register to [Alchemy](https://www.alchemy.com/) to get Alchemy `url`
-- [Etherscan](https://etherscan.io/)
-  - Register to [Etherscan](https://etherscan.io/) to get Etherscan API Key
-- [Coinmarketcap](https://coinmarketcap.com/api/)
-  - Register to [Coinmarketcap](https://coinmarketcap.com/api/) to get Coin Private Key
+- [Chrome Browser](https://www.google.com/intl/id_id/chrome/) to open [Remix](https://remix.ethereum.org/)
 ---
 
+## Specifications
+
+
 ## Development Guide
-- Grocery Shop Quickstart
-```
-git clone https://github.com/GLU-Project/bca-workshop.git
-cd bca-workshop
-npm i
-
-```
-- create `.env` file based on `.env.example`
-- input your `GOERLI_RPC_URL`
-- input your `PRIVATE_KEY` of your metamask wallet
-- input your `ETHERSCAN_API_KEY` of your etherscan
-- input your `COINMARKETCAP_API_KEY` of your coinmarketcap
-- see how to get those value [in resource link below]()
-
-```
-GOERLI_RPC_URL=""
-PRIVATE_KEY=""
-ETHERSCAN_API_KEY=""
-COINMARKETCAP_API_KEY=""
-
-```
-
-## Usage
-#### Compile
-```
-npx hardhat compile
-```
-
-#### Deploy
-- Using hardhat network
-```
-npx hardhat run scripts/deploy.ts --network hardhat 
-```
-- Using goerli network
-```
-npx hardhat run scripts/deploy.ts --network goerli 
-```
-#### Testing
-```
-npx hardhat test
-```
-
-## Resources
-
-- [How to Set Up Alchemy Account & Get Alchemy API URL](https://www.youtube.com/watch?v=tfggWxfG9o0&ab_channel=Alchemy)
-- [How to Get Metamask Private Key](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-Export-an-Account-Private-Key)
-- [How to Get Etherscan API Key](https://docs.etherscan.io/getting-started/viewing-api-usage-statistics)
-- [How to Get Coinmarketcap API Key](https://www.appypie.com/faqs/sitename-how-to-obtain-coinmarketcap-api-key)
+- Open [Remix](https://remix.ethereum.org/)
+- Create new workspace **Session 4** and new file **PiggyBank.sol**
+- Implement Piggy Bank Specifications
