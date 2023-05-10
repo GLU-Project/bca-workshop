@@ -1,4 +1,4 @@
-# Piggy Bank
+# ERC20 Basic
 
 This project is intended for BCA Workshop project. You just simply clone this project to begin.
 
@@ -6,15 +6,12 @@ This project is intended for BCA Workshop project. You just simply clone this pr
 - [Chrome Browser](https://www.google.com/intl/id_id/chrome/) to open [Remix](https://remix.ethereum.org/)
 ---
 
-## Specifications
-1. Andrew wants to build a piggy-bank for his daughter, Betty
-2. Andrew will be the owner of this piggy-bank
-3. Upon initializing the contract, Andrew will set Betty as the child
-4. Andrew will also set the amoung that Betty is allowed to withdraw at any one time.
-5. Betty is the only person who can withdraw the ether from her account.
-6. Anyone can deposit into the smart contract.
-
 ## Development Guide
-- Open [Remix](https://remix.ethereum.org/)
-- Create new workspace **Session 4** and new file **PiggyBank.sol**
-- Implement Piggy Bank Specifications
+- Open [Remix](https://remix.ethereum.org/).
+- ERC20Basic-withoutOpenZeppelin : ERC20 Basic implementation without using OpenZeppelin.
+- ERC20Basic : ERC20 Basic implementation using OpenZeppelin.
+
+## References
+- [OpenZeppelin ERC20](https://docs.openzeppelin.com/contracts/4.x/tokens)
+- [Using OpenZeppelin with Hardhat](https://docs.openzeppelin.com/upgrades-plugins/1.x/hardhat-upgrades)
+
