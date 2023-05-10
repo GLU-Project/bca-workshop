@@ -4,7 +4,7 @@ import { useEffect, useState } from "react"
 import "./App.css"
 import ItemCard from "./components/ItemCard"
 
-import { GroceryShop, GroceryShop__factory } from "./typechain-types"
+import { GroceryShop } from "./typechain-types"
 
 function App() {
     const [provider, setProvider] = useState<
@@ -13,34 +13,15 @@ function App() {
     const [groceryShop, setGroceryShop] = useState<GroceryShop | undefined>()
     const [balanceInEther, setBalanceInEther] = useState<number>(0)
 
-    useEffect(() => {
-        if (provider) {
-            const groceryShop = GroceryShop__factory.connect(
-                process.env.REACT_APP_CONTRACT_ADDRESS || "",
-                provider.getSigner(0)
-            )
-            setGroceryShop(groceryShop)
-        }
-    }, [provider])
+    useEffect(() => {}, [provider])
 
     useEffect(() => {
         connectToMetamask()
     }, [])
 
-    const connectToMetamask = async () => {
-        const provider = new ethers.providers.Web3Provider(window.ethereum)
-        const accounts = await provider.send("eth_requestAccounts", [])
-        const balance = await provider.getBalance(accounts[0])
-        const balanceInEther = ethers.utils.formatEther(balance)
-        setBalanceInEther(parseFloat(balanceInEther))
-        setProvider(provider)
-    }
+    const connectToMetamask = async () => {}
 
-    const withdraw = () => {
-        if (groceryShop) {
-            groceryShop.withdraw()
-        }
-    }
+    const withdraw = () => {}
 
     return (
         <div className="App">

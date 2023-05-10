@@ -21,31 +21,13 @@ const ItemCard = (props: {
     >()
 
     useEffect(() => {
-        const getNumberOfItems = async () => {
-            if (props.groceryShop !== undefined) {
-                const item = await props.groceryShop.groceryItem(props.id)
-                setItem({
-                    name: item[0],
-                    numberOfItems: item[1].toNumber(),
-                })
-            }
-        }
+        const getNumberOfItems = async () => {}
         getNumberOfItems()
     }, [props.groceryShop, props.id])
 
-    const addItem = () => {
-        if (props.groceryShop) {
-            props.groceryShop.add(props.id, 1)
-        }
-    }
+    const addItem = () => {}
 
-    const buyItem = () => {
-        if (props.groceryShop) {
-            props.groceryShop.buy(props.id, 1, {
-                value: ethers.utils.parseEther("0.01"),
-            })
-        }
-    }
+    const buyItem = () => {}
 
     return (
         <Card sx={{ minWidth: 275 }}>
