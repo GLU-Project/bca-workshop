@@ -1,4 +1,4 @@
-# Grocery Shop
+# Piggy Bank
 
 This project is intended for BCA Workshop project. You just simply clone this project to begin.
 
