@@ -11,6 +11,7 @@ function App() {
         ethers.providers.Web3Provider | undefined
     >()
     const [groceryShop, setGroceryShop] = useState<GroceryShop | undefined>()
+    const [balanceInEther, setBalanceInEther] = useState<number>(0)
 
     useEffect(() => {
         if (provider) {
@@ -22,11 +23,16 @@ function App() {
         }
     }, [provider])
 
+    useEffect(() => {
+        connectToMetamask()
+    }, [])
+
     const connectToMetamask = async () => {
         const provider = new ethers.providers.Web3Provider(window.ethereum)
         const accounts = await provider.send("eth_requestAccounts", [])
         const balance = await provider.getBalance(accounts[0])
         const balanceInEther = ethers.utils.formatEther(balance)
+        setBalanceInEther(parseFloat(balanceInEther))
         setProvider(provider)
     }
 
@@ -43,7 +49,7 @@ function App() {
                     <Grid container spacing={2}>
                         {[...Array(3)].map((_, i) => {
                             return (
-                                <Grid key={`item-${i}`} item xs={4}>
+                                <Grid key={`item-${i}`} item md={4}>
                                     <ItemCard
                                         id={i}
                                         provider={provider}
@@ -53,6 +59,9 @@ function App() {
                             )
                         })}
                     </Grid>
+                    <br />
+                    <p className="balance">Balance: {balanceInEther} ether</p>
+
                     <br />
                     <Button
                         color="primary"
