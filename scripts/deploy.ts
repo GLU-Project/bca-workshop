@@ -20,10 +20,6 @@ async function main() {
         await groceryShop.deployTransaction.wait(6)
         await verify(groceryShop.address, [3, 3, 3])
     }
-
-    //interacting with the contract
-    //const transactionResponse = await ...
-    //await transactionResponse.wait(1)
 }
 
 async function verify(contractAddress: any, args: any) {
