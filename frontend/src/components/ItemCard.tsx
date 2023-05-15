@@ -11,6 +11,7 @@ const ItemCard = (props: {
     id: number
     provider: ethers.providers.Web3Provider | undefined
     groceryShop: GroceryShop | undefined
+    setLog: (data: string) => void
 }) => {
     const [item, setItem] = useState<
         | {
@@ -41,9 +42,16 @@ const ItemCard = (props: {
 
     const buyItem = () => {
         if (props.groceryShop) {
-            props.groceryShop.buy(props.id, 1, {
-                value: ethers.utils.parseEther("0.01"),
-            })
+            props.groceryShop
+                .buy(props.id, 1, {
+                    value: ethers.utils.parseEther("0.01"),
+                })
+                .then((val) => {
+                    console.log(val)
+                })
+                .catch((e) => {
+                    alert(e.error.message)
+                })
         }
     }
 
