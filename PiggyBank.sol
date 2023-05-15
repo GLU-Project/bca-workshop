@@ -25,7 +25,7 @@ contract PiggyBank {
             "Withdraw amount greater than balance"
         );
         require(amount <= address(this).balance, "Amount greater than balance");
-        (bool success, ) = payable(msg.sender).call{value: amount}("");
+        bool success = payable(msg.sender).send(amount);
         require(success, "Failed to send Ether");
     }
 }
