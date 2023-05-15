@@ -78,9 +78,7 @@ contract GroceryShop {
     }
 
     function withdraw() public onlyOwner {
-        (bool success, ) = payable(msg.sender).call{
-            value: address(this).balance
-        }("");
+        bool success = payable(msg.sender).send(address(this).balance);
         require(success, "Failed withdraw balance");
     }
 

@@ -32,7 +32,7 @@ describe("GroceryShop", function () {
         let [owner, other] = await ethers.getSigners()
 
         await expect(groceryShop.connect(other).add(0, 1)).to.be.reverted
-        await expect(groceryShop.add(0, 1)).to.be.ok
+        expect(groceryShop.add(0, 1)).to.be.ok
     })
 
     it("should add grocery > 0", async function () {
@@ -74,6 +74,6 @@ describe("GroceryShop", function () {
 
         item = await groceryShop.groceryItem(itemType)
 
-        await expect(item.numberOfItems).to.equal(expectedTotal)
+        expect(item.numberOfItems).to.equal(expectedTotal)
     })
 })
