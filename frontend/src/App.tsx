@@ -13,7 +13,7 @@ function App() {
     const [groceryShop, setGroceryShop] = useState<GroceryShop | undefined>()
     const [balanceInEther, setBalanceInEther] = useState<number>(0)
     const [receiptId, setReceiptId] = useState<number>(0)
-    const [log, setLog] = useState<string>("")
+
     useEffect(() => {
         if (provider) {
             const groceryShop = GroceryShop__factory.connect(
@@ -65,7 +65,6 @@ function App() {
                             return (
                                 <Grid key={`item-${i}`} item md={4}>
                                     <ItemCard
-                                        setLog={setLog}
                                         id={i}
                                         provider={provider}
                                         groceryShop={groceryShop}
@@ -107,8 +106,6 @@ function App() {
                             </Button>
                         </Grid>
                     </Grid>
-                    <br />
-                    <div>{log}</div>
                 </div>
             ) : (
                 <Button

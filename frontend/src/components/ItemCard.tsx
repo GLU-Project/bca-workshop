@@ -11,7 +11,6 @@ const ItemCard = (props: {
     id: number
     provider: ethers.providers.Web3Provider | undefined
     groceryShop: GroceryShop | undefined
-    setLog: (data: string) => void
 }) => {
     const [item, setItem] = useState<
         | {
