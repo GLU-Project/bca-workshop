@@ -86,7 +86,7 @@ contract GroceryShop {
 
     function cashRegister(
         uint256 _purchaseId
-    ) public view onlyOwner returns (address, GroceryType, uint256) {
+    ) public view returns (address, GroceryType, uint256) {
         require(_purchaseId <= purchaseId, "Invalid Purchase ID");
 
         return (
